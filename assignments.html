@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudyFlow — Assignments</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="assignments">
+  <header class="nav">
+    <div class="logo">StudyFlow</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="todo.html">To-Do</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="assignments.html" class="active">Assignments</a>
+      <a href="pomodoro.html">Pomodoro</a>
+      <a href="videos.html">Videos</a>
+      <a href="tips.html">Tips</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Assignment Tracker</h2>
+      <form id="assignment-form" class="grid-2">
+        <input id="assignment-title" placeholder="Assignment title" required>
+        <input id="assignment-subject" placeholder="Subject" required>
+        <input id="assignment-due" type="date" required>
+        <select id="assignment-priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <textarea id="assignment-notes" placeholder="Notes (optional)"></textarea>
+        <button class="btn">Add Assignment</button>
+      </form>
+
+      <div id="assignments-list" class="list"></div>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
