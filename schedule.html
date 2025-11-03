@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudyFlow — Schedule</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="schedule">
+  <header class="nav">
+    <div class="logo">StudyFlow</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="todo.html">To-Do</a>
+      <a href="schedule.html" class="active">Schedule</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="pomodoro.html">Pomodoro</a>
+      <a href="videos.html">Videos</a>
+      <a href="tips.html">Tips</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Class Schedule Organizer</h2>
+      <form id="schedule-form" class="grid-2">
+        <input id="class-name" placeholder="Subject / Class name" required>
+        <select id="class-day">
+          <option value="Mon">Monday</option>
+          <option value="Tue">Tuesday</option>
+          <option value="Wed">Wednesday</option>
+          <option value="Thu">Thursday</option>
+          <option value="Fri">Friday</option>
+          <option value="Sat">Saturday</option>
+          <option value="Sun">Sunday</option>
+        </select>
+        <input id="class-start" type="time" required>
+        <input id="class-end" type="time" required>
+        <input id="class-location" placeholder="Location (Lab/Room/Link)">
+        <button class="btn">Add Class</button>
+      </form>
+
+      <div class="week-grid" id="week-grid">
+        <!-- Dynamically rendered weekly schedule -->
+      </div>
+
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
