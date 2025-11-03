@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudyFlow — Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://kit.fontawesome.com/yourkitid.js" crossorigin="anonymous"></script>
+</head>
+<body data-page="dashboard">
+  <header class="nav">
+    <div class="logo">StudyFlow</div>
+    <nav>
+      <a href="index.html" class="active">Dashboard</a>
+      <a href="todo.html">To-Do</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="pomodoro.html">Pomodoro</a>
+      <a href="videos.html">Videos</a>
+      <a href="tips.html">Tips</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <h1>Crush your goals this week</h1>
+      <p class="muted">Focus. Plan. Execute.</p>
+      <div class="hero-actions">
+        <a class="btn" href="todo.html">Open To-Do</a>
+        <a class="btn ghost" href="pomodoro.html">Start Pomodoro</a>
+      </div>
+    </section>
+
+    <section class="panels">
+      <div class="card stat" id="stat-tasks">
+        <h3>Tasks</h3>
+        <div class="big" id="dashboard-tasks-count">0</div>
+        <p class="muted">Pending tasks</p>
+      </div>
+
+      <div class="card stat" id="stat-assignments">
+        <h3>Assignments</h3>
+        <div class="big" id="dashboard-assignments-count">0</div>
+        <p class="muted">Due soon</p>
+      </div>
+
+      <div class="card stat" id="stat-studytime">
+        <h3>Study Time</h3>
+        <div class="big" id="dashboard-studytime">0m</div>
+        <p class="muted">This session (tracked)</p>
+      </div>
+
+      <div class="card chart" id="progress-card">
+        <h3>Progress</h3>
+        <div class="progress-bar">
+          <div class="progress-fill" id="dashboard-progress" style="width:0%"></div>
+        </div>
+        <p class="muted" id="dashboard-progress-text">0% complete</p>
+      </div>
+    </section>
+
+    <section class="quick-list card">
+      <h3>Upcoming (next 7 days)</h3>
+      <ul id="dashboard-upcoming" class="list-empty">No upcoming items</ul>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>Made with ❤️ — StudyFlow</span>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
