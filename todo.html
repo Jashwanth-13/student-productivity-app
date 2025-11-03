@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudyFlow — To-Do</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="todo">
+  <header class="nav">
+    <div class="logo">StudyFlow</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="todo.html" class="active">To-Do</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="pomodoro.html">Pomodoro</a>
+      <a href="videos.html">Videos</a>
+      <a href="tips.html">Tips</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Daily To-Do</h2>
+      <form id="todo-form" class="flex-row">
+        <input id="todo-text" placeholder="Add a task (e.g., Read CS notes)" required>
+        <select id="todo-priority" title="Priority">
+          <option value="low">Low</option>
+          <option value="medium" selected>Medium</option>
+          <option value="high">High</option>
+        </select>
+        <input id="todo-due" type="date">
+        <button class="btn">Add</button>
+      </form>
+      <div class="filters">
+        <input id="todo-search" placeholder="Search tasks...">
+        <div class="small">
+          <label><input type="radio" name="todo-filter" value="all" checked> All</label>
+          <label><input type="radio" name="todo-filter" value="active"> Active</label>
+          <label><input type="radio" name="todo-filter" value="done"> Done</label>
+        </div>
+      </div>
+      <ul id="todo-list" class="task-list"></ul>
+      <p class="muted">Tip: Use the due date to prioritise daily routine.</p>
+    </section>
+
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
