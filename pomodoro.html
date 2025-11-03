@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>StudyFlow — Pomodoro</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body data-page="pomodoro">
+  <header class="nav">
+    <div class="logo">StudyFlow</div>
+    <nav>
+      <a href="index.html">Dashboard</a>
+      <a href="todo.html">To-Do</a>
+      <a href="schedule.html">Schedule</a>
+      <a href="assignments.html">Assignments</a>
+      <a href="pomodoro.html" class="active">Pomodoro</a>
+      <a href="videos.html">Videos</a>
+      <a href="tips.html">Tips</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="card timer-card">
+      <h2>Pomodoro Timer</h2>
+      <div class="timer-display" id="timer-display">25:00</div>
+      <div class="controls">
+        <label>Work <input id="work-min" type="number" min="1" value="25"> min</label>
+        <label>Break <input id="break-min" type="number" min="1" value="5"> min</label>
+      </div>
+      <div class="actions">
+        <button class="btn" id="start-btn">Start</button>
+        <button class="btn ghost" id="pause-btn">Pause</button>
+        <button class="btn danger" id="reset-btn">Reset</button>
+      </div>
+      <p class="muted">Completed sessions: <span id="pomodoro-count">0</span></p>
+    </section>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>
